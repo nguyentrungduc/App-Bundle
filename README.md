@@ -3,6 +3,8 @@
 Có rất nhiều điều thú vị được công bố tại I / O năm nay - trong đó có App bundles. Android App Bundles không chỉ cung cấp một định dạng upload mới cho các ứng dụng, mà nó sẽ ảnh hưởng đến cách chúng ta xây dựng và cấu trúc các ứng dụng của chúng ta theo một định dạng modules. Trong bài này, mình sẽ giới thiệu về Android App Bundles để áp dụng vào project của mình
 
 ### Sử dụng Android App Bundles có lợi gì?
+
+- Khi phát hành ứng dụng bằng định dạng Android App Bundle, bạn có thể giảm kích thước ứng dụng, đơn giản hóa bản phát hành và phân phối các tính năng theo yêu cầu. Nhờ có các lợi ích bổ sung này mà Android App Bundle đã trở thành định dạng phát hành được đề xuất trên Google Play.
 - Kích thước ứng dụng nhỏ hơn
 
 - Không còn phải quản lí nhiều file APK
@@ -15,9 +17,12 @@ Có rất nhiều điều thú vị được công bố tại I / O năm nay - t
 
 - Trước đây chúng ta phải tạo ra nhiều loại file Android Package (APK) để phù hợp với từng phiên bản API hay từng loại thiết bị khác nhau. Với Android App Bundles ta chỉ cần tải lên và tạo ra duy nhất với tất cả tài nguyên ứng dụng. Nghĩa là khi bạn sử dụng Android App Bundle(.aab) nó sẽ tạo ra nhiều loại apk được tối ưu hóa cho cấu hình của từng thiết bị cài đặt nó, vì vậy ta chỉ cần download source code và resource để chạy chúng, ví dụ ta không cần thêm ngôn ngữ khác khi mà ta đã để Tiếng Anh là ngôn ngữ mặc định của mình. Ta không còn phải tạo, quản lý nhiều APK để hỗ trợ các thiết bị khác nhau và người dùng nhận được các ứng dụng với dung lượng nhỏ hơn, được tối ưu hóa nhiều hơn.
 
-
-
 - Ngoài ra, bạn có thể thêm các module tính năng động vào ứng dụng của mình và đưa chúng vào App Bundles. Các module này chứa các tính năng và nội dung mà bạn có thể quyết định không bao gồm khi người dùng tải xuống và cài đặt ứng dụng của bạn lần đầu tiên. Sử dụng Thư viện cốt lõi của Play , sau đó ứng dụng của bạn có thể yêu cầu tải xuống các module đó dưới dạng APK tính năng động và thông qua Dynamic Delivery, Google Play chỉ phân phát mã code và resoure cho modules đó cho thiết bị.
+
+#### Cách hoạt động của app bundle
+- App bundle dùng mô hình phân phối mới có tên là Dynamic Delivery của Google Play để tạo và phân phối các APK được tối ưu hóa cho từng cấu hình thiết bị. Bằng cách xóa mã và tài nguyên không sử dụng cho các thiết bị khác, mô hình phân phối này mang lại một ứng dụng có kích thước nhỏ hơn, hiệu quả hơn để người dùng cài đặt.
+
+#### 
 
 ### 3. Trong Android App Bundles (.aab) có gì?
 - APK là thứ ta có thể phân phối trực tiếp cho thiết bị của người dùng, trong khi đó, App Bundles là định dạng xuất bản không thể được cài đặt trên thiết bị của chính nó. Mặc dù chúng có điểm giống nhau, nhưng aab có chứa một số nội dung mà ta sẽ không tìm thấy trong các tệp APK. Ví dụ: các tệp dữ liệu meta trong các gói được sử dụng bằng cách sử dụng công cụ để tạo APK sẽ được phân phối cho người dùng, những tệp này sau đó không được bao gồm trong các APK. Một tệp abb điển hình có thể chứa:
