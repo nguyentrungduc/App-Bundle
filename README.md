@@ -22,7 +22,16 @@ Có rất nhiều điều thú vị được công bố tại I / O năm nay - t
 #### Cách hoạt động của app bundle
 - App bundle dùng mô hình phân phối mới có tên là Dynamic Delivery của Google Play để tạo và phân phối các APK được tối ưu hóa cho từng cấu hình thiết bị. Bằng cách xóa mã và tài nguyên không sử dụng cho các thiết bị khác, mô hình phân phối này mang lại một ứng dụng có kích thước nhỏ hơn, hiệu quả hơn để người dùng cài đặt.
 
-#### 
+#### Lợi ích của việc sử dụng app bundle 
+- Với app bundle, bạn chỉ cần tạo, ký và tải một cấu phần phần mềm duy nhất lên để hỗ trợ APK tối ưu hóa cho nhiều cấu hình thiết bị khác nhau. Sau đó, Google Play sẽ quản lý và phân phối APK của ứng dụng cho bạn. Nhờ vậy, bạn không cần phải quản lý mã phiên bản cho từng kết hợp giao diện nhị phân ứng dụng (ABI), mật độ màn hình và ngôn ngữ mà mình muốn hỗ trợ. Ngoài ra, khi sử dụng app bundle, bạn có thể hưởng lợi từ những cải tiến liên tục được thêm vào quy trình phân phối.
+
+- So với APK, app bundle có những ưu điểm sau:
+
+- Có kích thước tải xuống và dung lượng trên đĩa nhỏ hơn
+- Có thể sử dụng thư viện gốc chưa nén (Android 6.0 trở lên) lưu trữ trên APK thay vì thiết bị của người dùng, nhờ đó có thể giảm kích thước tải xuống, dung lượng trên đĩa và thời gian cài đặt
+- Phân phối cho người dùng các cấu hình và chức năng mà họ cần khi họ yêu cầu chứ không phải trong quá trình cài đặt
+- Đơn giản hóa việc quản lý bản dựng và bản phát hành bằng cách loại bỏ nhu cầu tạo và phát hành nhiều APK
+- Khi bạn tải app bundle lên Play Console, Google Play sẽ gửi một tệp nhị phân được tối ưu hóa cho thiết bị.
 
 ### 3. Trong Android App Bundles (.aab) có gì?
 - APK là thứ ta có thể phân phối trực tiếp cho thiết bị của người dùng, trong khi đó, App Bundles là định dạng xuất bản không thể được cài đặt trên thiết bị của chính nó. Mặc dù chúng có điểm giống nhau, nhưng aab có chứa một số nội dung mà ta sẽ không tìm thấy trong các tệp APK. Ví dụ: các tệp dữ liệu meta trong các gói được sử dụng bằng cách sử dụng công cụ để tạo APK sẽ được phân phối cho người dùng, những tệp này sau đó không được bao gồm trong các APK. Một tệp abb điển hình có thể chứa:
