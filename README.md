@@ -149,3 +149,20 @@ resources.pb - Tương tự như tệp resource.arac có thể tìm thấy bên 
       
         splitInstallManager
         .deferredUninstall(Arrays.asList("dynamicModuleUninstall"))
+        
+### Test app với bundler tool 
+- Vì khi sử dụng App - bundle, ta ko thể lấy luôn file apk của chúng mà phải sử dụng bundle tool để gen ra apks file
+- Link repository:  https://github.com/google/bundletool/releases
+- Để chuyển từ .abb -> apks dùng lệnh
+
+                    bundletool build-apks --bundle=<path to .aab> --output=<out.apks>
+                    
+- Sau đó giải nén .apk thành apk
+                    
+                    
+                    mkdir apks
+                    
+
+ 
+ 
+
