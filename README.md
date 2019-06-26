@@ -162,7 +162,13 @@ resources.pb - Tương tự như tệp resource.arac có thể tìm thấy bên 
                     
                     mkdir apks
                     
+### Dynamic Module với từng API
+### API <20 : Không support download apks trong khi dùng app, Google Play sẽ tạo ra  apk duy nhất đó là multi-apk, nó sẽ tối ưu hóa cho thiết bị đó, nó tương tự như multi apk hồi xưa vậy.
+- Tuy nhiên nó bao gồm tất cả các ngôn ngữ mà ứng dụng của bạn hỗ trợ. Ví dụ, điều này cho phép người dùng thay đổi cài đặt ngôn ngữ ưa thích của ứng dụng mà không phải tải xuống nhiều APK khác nhau.
+- Nhiều APK không có khả năng tải xuống các mô-đun tính năng động theo yêu cầu. Để bao gồm một mô-đun động trong APK này, bạn phải tắt Theo yêu cầu hoặc bật Fuses khi tạo mô-đun tính năng động. 
 
+- Với dynamic delivery ta không cần phải built, sigin, upload và quản lí multi apk mà ứng dụng của bạn hỗ trợ. Bạn vẫn chỉ xây dựng và tải lên một gói ứng dụng duy nhất cho toàn bộ ứng dụng của mình và Google Play sẽ lo phần còn lại cho bạn. Vì vậy, cho dù bạn có kế hoạch hỗ trợ các thiết bị chạy Android 4.4 trở xuống hay không, Dynamic Delivery cung cấp cơ chế phục vụ linh hoạt cho cả developer và user dùng app
+### Api >= 21 : Cho phép download dynamic modudle khi dùng app 
  
  
 
