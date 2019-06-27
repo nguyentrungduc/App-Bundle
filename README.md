@@ -181,3 +181,10 @@ resources.pb - Tương tự như tệp resource.arac có thể tìm thấy bên 
 #### Delivery Option 
 1. At-install delivery : Theo mặc định, các module tính năng động không cấu hình bất kỳ tùy chọn phân phối nào được mô tả ở trên được tải xuống khi cài đặt ứng dụng. Đây là một hành vi quan trọng bởi vì nó có nghĩa là bạn có thể áp dụng các tùy chọn phân phối nâng cao dần dần. Ví dụ: bạn có thể hưởng lợi từ việc module hóa các tính năng ứng dụng của bạn và chỉ cho phép phân phối theo yêu cầu sau khi bạn thực hiện đầy đủ các yêu cầu tải xuống bằng thư viện Play Core. 
 Ngoài ra, ứng dụng của bạn có thể yêu cầu gỡ cài đặt các tính năng sau. Vì vậy, nếu bạn yêu cầu một số tính năng nhất định khi cài đặt ứng dụng, nhưng sau đó, bạn có thể giảm kích thước cài đặt bằng cách yêu cầu xóa tính năng này khỏi thiết bị.
+
+2. On demand delivery: Cho phép ứng dụng của bạn yêu cầu và tải xuống các mô-đun tính năng động khi cần.
+
+3. Conditional delivery: Cho phép bạn chỉ định một số yêu cầu thiết bị người dùng nhất định, chẳng hạn như tính năng phần cứng, ngôn ngữ và mức API tối thiểu để xác định xem tính năng đã được mô đun hóa có được tải xuống khi cài đặt ứng dụng không
+
+4. Instant delivery: Google Play Instant cho phép người dùng tương tác với ứng dụng của bạn mà không cần cài đặt (các) APK trên thiết bị của họ. Thay vào đó, họ có thể trải nghiệm ứng dụng của bạn thông qua nút 'Thử ngay' trên Cửa hàng Google Play hoặc URL mà bạn tạo. Hình thức phân phối nội dung này giúp bạn dễ dàng tăng cường tương tác với ứng dụng của mình. 
+Với phân phối tức thì, bạn có thể sử dụng Google Play Instant để cho phép người dùng của bạn trải nghiệm ngay lập tức các tính năng nhất định của ứng dụng mà không cần cài đặt.
