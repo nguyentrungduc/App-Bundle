@@ -169,6 +169,14 @@ resources.pb - Tương tự như tệp resource.arac có thể tìm thấy bên 
 
 - Với dynamic delivery ta không cần phải built, sigin, upload và quản lí multi apk mà ứng dụng của bạn hỗ trợ. Bạn vẫn chỉ xây dựng và tải lên một gói ứng dụng duy nhất cho toàn bộ ứng dụng của mình và Google Play sẽ lo phần còn lại cho bạn. Vì vậy, cho dù bạn có kế hoạch hỗ trợ các thiết bị chạy Android 4.4 trở xuống hay không, Dynamic Delivery cung cấp cơ chế phục vụ linh hoạt cho cả developer và user dùng app
 ### Api >= 21 : Cho phép download dynamic modudle khi dùng app 
- 
- 
+### Modularize app
+- Là quá trình tách các thành phần logic của app thành các module riêng biệt.
+- Việc này cần có sự cân nhắc và mất nhiều thời gian, nhưng nó có một số lợi ích sau:
+1. Phát triển song song: bằng việc tách các thành phần logic của ứng dụng thành các module, các nhóm hoặc cá nhân có thể sở hữu 1 module để phát triển ít gây conflic hơn, tránh gây gián đoạn.  Ngoài ra, nếu bạn có logic mà sử dụng trong các phần khác nhau của ứng dụng, bạn có thể sử dụng các mô-đun thư viện để thúc đẩy việc tái sử dụng và đóng gói code
+2. Cải thiện thời gian build app: Hệ thống built grade sẽ tối ưu hơn về hiệu năng khi ứng dụng đc tổ chức dưới dạng module. Ví dụ, bạn bật chế độ parallel project execution để thực hiện multi-core processor, hệ thống built nhiều module cùng một lúc để giảm thời gian built 
+3. Customize feature delivery : Việc module hóa các tính năng ứng dụng của bạn như các module tính năng động là một yêu cầu để tận dụng các tùy chọn phân phối tùy chỉnh Dynamic Delivery, như theo yêu cầu, có điều kiện và phân phối ngay lập tức. Tạo các tính năng động theo yêu cầu đòi hỏi nhiều nỗ lực hơn và có thể tái cấu trúc ứng dụng của bạn. Vì vậy, hãy cân nhắc cẩn thận những tính năng nào trong ứng dụng của bạn sẽ được hưởng lợi nhiều nhất từ ​​việc được mô đun hóa thành các tính năng động và hưởng lợi từ các tùy chọn phân phối tùy chỉnh.
+### Sử dụng dynamic feature module để phân phối module 
+- Một lợi ích duy nhất của Phân phối động là khả năng tùy chỉnh cách thức và thời điểm các tính năng khác nhau của ứng dụng của bạn được tải xuống trên các thiết bị chạy Android 5.0 trở lên. Ví dụ: để giảm kích thước tải xuống ban đầu của ứng dụng, bạn có thể định cấu hình một số tính năng nhất định để được tải xuống khi cần theo yêu cầu hoặc chỉ bởi các thiết bị hỗ trợ một số khả năng nhất định, chẳng hạn như khả năng chụp ảnh hoặc hỗ trợ các tính năng thực tế tăng cường.
+- Mặc dù bạn nhận được các bản tải xuống được tối ưu hóa cao theo mặc định khi bạn tải lên ứng dụng của mình dưới dạng gói ứng dụng, các tùy chọn phân phối tính năng nâng cao và tùy chỉnh hơn yêu cầu cấu hình bổ sung và mô đun hóa các tính năng ứng dụng của bạn bằng mô-đun tính năng động. Nghĩa là, các mô-đun tính năng động cung cấp các khối xây dựng để tạo các tính năng mô-đun mà bạn có thể định cấu hình cho từng khối được tải xuống khi cần.
+
 
